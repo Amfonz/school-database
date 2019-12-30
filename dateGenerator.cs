@@ -1,21 +1,35 @@
 using System;
 namespace school_db {
   class DateGenerator {
-    int year = 2016;
-    public DateGenerator() {
+    int year;
+    public DateGenerator(int year) {
+      this.year = year;
     }
-    private int getRandomYear() {
+
+    private int getRandomStudentYear() {
       //return random year within 4 years of year
       Random rand = new Random();
       return year + rand.Next(0,4);
     }
 
-    void setYear(int year) {
+    private int getRandomTeacherYear() {
+      //return random year within 4 years of year
+      Random rand = new Random();
+      return year + rand.Next(0,10);
+    }
+
+    public void setYear(int year) {
       this.year = year;
     }
-    public string getRandomDate() {
+    public string getRandomDate(string type) {
       Random rand = new Random();
-      string year = getRandomYear().ToString();
+      string year;
+      if (type == "student") {
+        year = getRandomStudentYear().ToString();
+
+      }else {
+        year = getRandomTeacherYear().ToString();
+      }
       string month = rand.Next(1,13).ToString("D2");
       string day;
       switch (Int32.Parse(month)) {
