@@ -1,16 +1,17 @@
 using System;
 using System.IO;
 namespace school_db {
-  class StudentRecordGenerator {
-    DateGenerator dGen = new DateGenerator(2016);
+  class TeacherRecordGenerator {
+    DateGenerator dGen = new DateGenerator(1990);
     NameGenerator nGen = new NameGenerator();
 
     string[] records;
+
     int numberOfRecords;
-  
-    public StudentRecordGenerator(int numberOfRecords){
+
+    public TeacherRecordGenerator(int numberOfRecords) {
       this.numberOfRecords = numberOfRecords;
-      this.records = new string[numberOfRecords];
+      records = new string[numberOfRecords];
     }
 
     public void generateRecords() {
@@ -18,16 +19,16 @@ namespace school_db {
       for(int i = 0; i < numberOfRecords; i++){
         string firstName = nGen.getRandomName();
         string lastName = nGen.getRandomName();
-        string date = dGen.getRandomDate("student");
-        int lockerNumber = rand.Next(1,numberOfRecords+1);
-        string sql = $"INSERT INTO STUDENT(FIRST_NAME,LAST_NAME,DATE_OF_BIRTH,LOCKER_NUMBER) VALUES ('{firstName}','{lastName}','{date}',{lockerNumber});";
+        string date = dGen.getRandomDate("teacher");
+        int salary = rand.Next(40000,100001);
+        string sql = $"INSERT INTO TEACHER(FIRST_NAME,LAST_NAME,EMPLOYMENT_START,SALARY) VALUES ('{firstName}','{lastName}','{date}',{salary});";
         this.records[i] = sql;
       }
     }
 
     public void writeSQLToFile() {
       try{
-        using (StreamWriter sr = new StreamWriter("student-records.sql")) {
+        using (StreamWriter sr = new StreamWriter("teacher-records.sql")) {
           sr.WriteLine("USE school");
           foreach (var record in records){
             sr.WriteLine(record);
@@ -38,5 +39,5 @@ namespace school_db {
         Console.WriteLine("Could not write to file");
       }
     }
-  }//end class
+  }
 }
