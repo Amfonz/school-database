@@ -11,14 +11,14 @@
 </ul>
 
 <p>
-  to run sql files start mysql server
-  use commands:
+insertion order guide:
+locker records before student
+teacher before purchases and dept_staff
 
-  mysql> source ~/Documents/school-database/db.sql;
-  -- to initialize db and tables
 
-  mysql> source ~/Documents/school-database/#-inserts.sql;
-  -- to insert records where # is a table name
+
+
+
 
   c# scripts generate all insert.sql files
 </p>
