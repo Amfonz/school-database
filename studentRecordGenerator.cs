@@ -20,7 +20,7 @@ namespace school_db {
         string lastName = nGen.getRandomName();
         string date = dGen.getRandomDate("student");
         int lockerNumber = rand.Next(1,numberOfRecords+1);
-        string sql = $"INSERT INTO STUDENT(FIRST_NAME,LAST_NAME,DATE_OF_BIRTH,LOCKER_NUMBER) VALUES ('{firstName}','{lastName}','{date}',{lockerNumber});";
+        string sql = $"INSERT INTO STUDENTS(FIRST_NAME,LAST_NAME,DATE_OF_BIRTH,LOCKER_NUMBER) VALUES ('{firstName}','{lastName}','{date}',{lockerNumber});";
         this.records[i] = sql;
       }
     }

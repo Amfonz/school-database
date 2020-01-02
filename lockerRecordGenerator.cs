@@ -21,7 +21,7 @@ namespace school_db {
       for(int i = 1; i <= numberOfRecords; i++){
         int[] combination = generateCombination();
 
-        string record = $"INSERT INTO LOCKER(COMBINATION_1,COMBINATION_2,COMBINATION_3) VALUES ({combination[0].ToString()},{combination[1].ToString()},{combination[2].ToString()});";
+        string record = $"INSERT INTO LOCKERS(COMBINATION_1,COMBINATION_2,COMBINATION_3) VALUES ({combination[0].ToString()},{combination[1].ToString()},{combination[2].ToString()});";
 
         records[i-1] = record;
       }

@@ -21,7 +21,7 @@ namespace school_db {
         string lastName = nGen.getRandomName();
         string date = dGen.getRandomDate("teacher");
         int salary = rand.Next(40000,100001);
-        string sql = $"INSERT INTO TEACHER(FIRST_NAME,LAST_NAME,EMPLOYMENT_START,SALARY) VALUES ('{firstName}','{lastName}','{date}',{salary});";
+        string sql = $"INSERT INTO TEACHERS(FIRST_NAME,LAST_NAME,EMPLOYMENT_START,SALARY) VALUES ('{firstName}','{lastName}','{date}',{salary});";
         this.records[i] = sql;
       }
     }
