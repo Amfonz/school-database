@@ -12,14 +12,10 @@
 
 <p>
 insertion order guide:
-locker records before student
+locker records before student <br>
 teacher before purchases and dept_staff
-
-
-
-
-
 
   c# scripts generate all insert.sql files
 </p>
 
+<p>sample queries are in the sample-queries.sql file </p>
