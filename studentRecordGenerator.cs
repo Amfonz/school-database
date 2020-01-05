@@ -2,7 +2,7 @@ using System;
 using System.IO;
 namespace school_db {
   class StudentRecordGenerator {
-    DateGenerator dGen = new DateGenerator(2016);
+    DateGenerator dGen = new DateGenerator(2000);
     NameGenerator nGen = new NameGenerator();
 
     string[] records;
