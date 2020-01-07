@@ -18,4 +18,4 @@ teacher before purchases and dept_staff
   c# scripts generate all insert.sql files
 </p>
 
-<p>sample queries are in the sample-queries.sql file </p>
+<p>Schema can be found in the db.sql file. <br>Sample queries are in the sample-queries.sql file. </p>
